@@ -1,0 +1,76 @@
+//提现
+extends ../layout
+
+block header
+    include ./block/header
+block main
+    .m-container.withdraw
+        .m-form.mt-20
+            .m-form-item.m-border-t
+                label.list-label 到账银行卡
+                input(type="text",class="list-input",placeholder="建设银行（5800）")
+        p.note
+            i.icon.icon-exclamationcircleo
+            span 单笔提现金额≧10元，当日最多提现3次。
+        .m-form.m-border-t.m-border-b
+            .m-form-item.m-border-t.r-icon
+                label.list-label 提现金额
+                input(type="text",class="list-input",placeholder="最多提现金额：10,000.00元")
+                i.icon.icon-questioncircleo
+            .m-form-item.m-border-t.code
+                label.list-label 验证码
+                input(type="text",class="list-input",placeholder="请输入")
+                button.code-btn 发送验证码
+                //button.code-btn.disabled 60秒
+        p.tip 验证码发送到132****0918
+        button.m-btn.btn-yellow(disabled) 登录
+
+        .ensure-mark.g-mark
+            p 由阳光保险提供账户资金安全保障
+                i.icon2.icon-lcsafeguard01
+
+    button.m-btn#button1 余额不足请充值
+    button.m-btn#button2 不符合要求
+    button.m-btn#button3 无可提现余额
+    script(src="js/licai.js")
+    script.
+        Domready(function () {
+            var button1 = document.querySelector('#button1'),
+                button2 = document.querySelector('#button2'),
+                button3 = document.querySelector('#button3'),
+                _layer2 = Layer({
+                    title:' ',
+                    content:'您的投资金额不符合投资要求， 请重新输入',
+                    success_btn_text : '知道了',
+                    className: 'layer-center',
+                    success:function(){
+                        console.log('success')
+                    }
+                }),
+                _layer1 = Layer({
+                    title:' ',
+                    content:'您的账户余额不足，请先去充值',
+                    success_btn_text: '充值',
+                    cancel_btn_text: '再看看',
+                    className: 'layer-center',
+                    success:function(){
+                        console.log('success')
+                    },
+                    cancel : function(){
+                        console.log('cancel')
+                    }
+                }),
+                _layer3 = Layer({
+                    title:' ',
+                    content:'您没有可提现余额',
+                    success_btn_text : '知道了',
+                    className: 'layer-center',
+                    success:function(){
+                        console.log('success')
+                    }
+
+                });
+            button1.addEventListener('click',_layer1.show,false);
+            button2.addEventListener('click',_layer2.show,false);
+            button3.addEventListener('click',_layer3.show,false);
+        })

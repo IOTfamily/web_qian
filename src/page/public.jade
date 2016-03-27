@@ -1,0 +1,217 @@
+// 公共组件
+extends ../layout
+
+block header
+    include ./block/header
+
+block main
+    
+    .m-container
+        h1 字体
+        div.f32 .f32 32px字体
+        div.f28 .f28 28px字体
+        div.f24 .f24 24px字体(默认大小)
+        br
+        br
+        h1 颜色
+        .c-Block 黑色 .c-Block #000
+        .c-Grey  灰色 .c-Grey #808080
+        .c-Grey2  灰色2 .c-Grey2 #a1a1a1
+        .c-Grey3  灰色3 .c-Grey3 #c1c1c1
+        .c-Orange  橙色 .c-Orange #ff8706
+        .c-Yellow  黄色 .c-Yellow #ffba00
+        .c-Red  红色 .c-Red #ff390b
+        .c-Blue  蓝色 .c-Blue #2882f8
+        .c-White  白色 .c-White #fff
+        br
+        br
+        h1 1px边框
+        .m-border 1px边框 .m-border
+        .m-border-t top边框 .m-border-t
+        .m-border-r right边框 .m-border-r
+        .m-border-b bottom边框 .m-border-b
+        .m-border-l left边框 .m-border-l
+        br
+        br
+        h1 图标
+        a(href="./icons.html") 点击查看所有图标
+        br
+        br
+        h1 复选框
+        input(type="checkbox",class="m-checkbox")
+        br
+        input(type="checkbox",checked="checked",class="m-checkbox")
+        br
+        input(type="checkbox",checked="checked",disabled,class="m-checkbox")
+        br
+        input(type="checkbox",disabled,class="m-checkbox")
+        br
+        br
+        h1 单选框
+        input(type="radio",class="m-radio")
+        br
+        input(type="radio",checked="checked",class="m-radio")
+        br
+        input(type="radio",checked="checked",disabled,class="m-radio")
+        br
+        input(type="radio",disabled,class="m-radio")
+        br
+        br
+        h1 列表
+        .m-list.m-border-t.m-border-b
+            .m-list-item.m-border-t
+                a(href="#")
+                    label.f32 我的投资
+                    span.icon.icon-right
+            .m-list-item.m-border-t
+                a(href="#")
+                    label.f32 交易记录
+                    span.icon.icon-right
+        .m-list
+            .m-list-item
+                a(href="#")
+                    label.f32 在线客户
+                    span.icon.icon-right
+        br
+        br
+        
+        h1 表单
+        .m-form.m-border-t.m-border-b
+            .m-form-item.m-border-t
+                label.list-label 手机号
+                input(type="text",class="list-input",placeholder="请输入手机号")
+            .m-form-item.error.m-border-t
+                label.list-label 手机号
+                input(type="text",class="list-input",value="手机号不正确",placeholder="请输入手机号")
+            .m-form-item.error.m-border-t
+                label.list-label 手机号＋开关
+                input(type="text",class="list-input-switch",value="手机号不正确",placeholder="请输入手机号")
+                span.list-input-switch-container
+                    .switchss.switch
+                        p
+                            input(value=1)
+                            span 先生
+                            label
+                            span 女士
+            .m-form-item.m-border-t
+                label.list-label 验证码
+                input(type="text",class="list-input",placeholder="请输入验证码")
+        button.m-btn 登录
+        
+        br
+        
+        h1 弹层
+        button.m-btn#layer1 弹层1
+        button.m-btn#layer2 弹层2，带取消按钮
+        button.m-btn#layer3 弹层2，传入内容
+        button.m-btn#layer4 loading弹层, demo3秒后自动关闭
+        button.m-btn#message_success 成功信息提示
+        button.m-btn#message_error 失败信息提示
+        br
+        #switch
+            .switchs.switch
+                p
+                    input(value=1)
+                    span 先生
+                    label
+                    span 女士
+        script(src="js/licai.js")
+        script.
+            function layerDemo(){
+                var layer1 = document.querySelector('#layer1'),
+                    layer2 = document.querySelector('#layer2'),
+                    layer3 = document.querySelector('#layer3'),
+                    layer4 = document.querySelector('#layer4'),
+                    message_success = document.querySelector('#message_success'),
+                    message_error = document.querySelector('#message_error'),
+                    switch_tests = document.querySelector('.switchs');
+                    _layer = Layer({
+                            title:'请注意',
+                            content:'请在借款用户申请时，将邀请码进行发放，<span class="c-Orange">请勿将邀请码对外公开</span>，以免泄漏您的信息。',
+                            success_btn_text : '知道了',
+                            success:function(){
+                                console.log('success')
+                            }
+                        }),
+                    _layer2 = Layer({
+                            title:'测试',
+                            content:'信息测试',
+                            success:function(){
+                                console.log('success')
+                            },
+                            cancel : function(){
+                                console.log('cancel')
+                            }
+                        }),
+                    _layer3 = Layer({
+                            loading : true
+                        });
+                 if(layer1){
+                     layer1.addEventListener('click',_layer.show,false);
+                 }
+                 if(layer2){
+                     layer2.addEventListener('click',_layer2.show,false);
+                 }
+                 if(layer3){
+                     layer3.addEventListener('click',function(){
+                         _layer2.show({
+                             content : '内容被我修改啦！！！！！'
+                         })
+                     },false)
+                 }
+                 if(layer4){
+
+                     layer4.addEventListener('click',function(){
+                         _layer3.show();
+                         setTimeout(_layer3.hide,3000)
+                     },false);
+                 }
+                 if(message_success){
+                     message_success.addEventListener('click',function(){
+                        $.message({
+                             'type': 'success',
+                             'text': '成功信息'
+                        })
+                     },false)
+                 }
+                 if(message_error){
+                     message_error.addEventListener('click',function(){
+                        $.message({
+                             'text': '失败信息'
+                        })
+                     },false)
+                 }
+                 if(switch_tests){
+                    $.SwitchTool({
+                        'node': document.querySelector('.switchs'),
+                        //方法可省略
+                        'left':function (argument) {
+                            // body...
+                        },
+                        'right':function (argument) {
+                            // body...
+                        }
+                    });
+                    $.SwitchTool({
+                        'node': document.querySelector('.switchss'),
+                        //方法可省略
+                        'left':function (data) {
+                            // body...
+                            console.log(data);
+                        },
+                        'right':function (data) {
+                            // body...
+                            console.log(data);
+                        }
+                    });
+                 }
+            }
+            layerDemo()
+        
+        
+        br
+        br
+        h1 公共尾 
+        include ./block/footer
+
+            

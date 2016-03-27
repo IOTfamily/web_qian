@@ -1,0 +1,19 @@
+理财工程说明
+
+1 旧版页面所用文件
+    old-layout.jade 公共头
+    js/index.js,
+    js/pay-help.js,
+    js/fastclick.js
+    js/util/dropload.min.js
+    css/block/frozen.scss,
+    css/brd-patch.scss,
+    css/pay-help.scss
+    font/iconfont.ttf
+    font/iconfont-full.ttf
+
+2 新版页面所用文件
+    layout.jade  新公共头
+    page/public.jade  公共组件
+    css/block/public.scss 公共样式
+    font/ionicons-v2.ttf 

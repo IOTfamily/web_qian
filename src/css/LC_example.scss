@@ -1,0 +1,64 @@
+// 理财页面
+@import './block/var';
+@import './block/reset';
+
+.mt20{ margin-top: 40rem/$n; }
+.p20{ padding: 0 40rem/$n;}
+.slider-ui{
+  position:relative;
+  input.slider{
+    margin: 0;
+    padding: 0 2rem/$n;
+    display:inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    height: 86rem/$n;
+    outline: none;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccc), color-stop(100%, #ccc));
+    background: linear-gradient(to right, #ccc 0%, #ccc 100%);
+    background-position: center;
+    background-size: 99% 6rem/$n;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    &::-webkit-slider-thumb{
+      position:relative;
+      width: 56rem/$n;
+      height: 56rem/$n;
+      border-radius: 100%;
+      background-color: #fff;
+      box-shadow: 0 0 4rem/$n rgba(0, 0, 0, 0.3), 0 4rem/$n 6rem/$n rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      -webkit-appearance: none;
+      border: 0;
+    }
+    &::-webkit-slider-thumb:before {
+      position: absolute;
+      top: 26rem/$n;
+      left: -4002rem/$n;
+      width: 4000rem/$n;
+      height: 6rem/$n;
+      background: #007aff;
+      content: ' ';
+    }
+    &::-webkit-slider-thumb:after {
+      position: absolute;
+      top: -30rem/$n;
+      left: -30rem/$n;
+      padding: 60rem/$n;
+      content: ' ';
+    }
+  }
+  .slider-val{
+    position: absolute;
+    text-align: center;
+    top: -28rem/$n;
+  }
+  .slider-btn{
+    width: 56rem/$n;
+    height: 56rem/$n;
+  }
+}
+.echart-input{
+  height:56rem/$n; margin:30rem/$n;background-color: #fff;outline: none;
+}

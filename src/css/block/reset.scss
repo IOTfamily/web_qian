@@ -1,0 +1,24 @@
+/* reset */
+html, body, div, h1, h2, h3, h4, h5, h6, p, 
+img, dl, dt, dd, ol, ul, li,form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+h1,h2,h3,h4,h5,h6 { font-weight:normal;}
+table { border-collapse:collapse; border-spacing:0; }
+img { border:0;}
+ol, ul { list-style: none; }
+i,b,em,strong { font-style:normal; text-decoration:none; font-weight: normal;}
+body { font-family:"Helvetica Neue",Helvetica,"Hiragino Sans GB","STHeitiSC-Light","Microsoft YaHei","微软雅黑",Arial,sans-serif;; }
+
+a, img {
+    -webkit-touch-callout: none; text-decoration:none;
+}
+html{
+	-webkit-text-size-adjust: 100%; /* 防止页面resize之后，字体未重新渲染的bug */
+    height:100%;
+    -webkit-tap-highlight-color: transparent; /** tap 高亮取消 **/
+    -webkit-user-select: none; /** 禁止选中 **/
+}
+body{ min-height:100%; }

@@ -1,0 +1,522 @@
+@import './block/var';
+// 理财详情页
+
+.project{
+    margin:0 0 20rem/$n;
+    .project-info{
+        width:100%;
+        .m-list{
+            margin:0 0 30rem/$n;
+        }
+        .info{
+            background: #2882f8; width: 100%; overflow: hidden; position: relative; z-index: 1; padding:0;
+            height:390rem/$n;
+            .title{
+                @extend .m-border-b; color:rgba(255,255,255,0.8); border-color:rbga(255,255,255,0.3);
+                height: 60rem/$n; line-height:66rem/$n; font-size:24rem/$n;
+                margin:0 30rem/$n; overflow: hidden;
+                span{
+                    display: block; float: right;
+                }
+            }
+            .tip{
+                position: absolute;  width:165rem/$n; height:165rem/$n;
+                left:-56rem/$n; top:-56rem/$n;
+                span{
+                    display: block; width:100%; height:100%;
+                    background:url(../img/licai/sun.png) no-repeat;
+                    background-size:100% 100%;
+                    opacity: 0.2; position: absolute; left:0; top:0; z-index: 1;
+                }
+                i{
+                    display: block; width:50rem/$n; 
+                    position: absolute; z-index: 2;
+                    left:66rem/$n; top:66rem/$n; font-size:24rem/$n;
+                    line-height:28rem/$n;
+                }
+                box-sizing: border-box; 
+                text-align:center; color:rgba(255,255,255,0.7);
+                
+            }
+            .btn-desc{
+                width: 117rem/$n; height:163rem/$n; top:70rem/$n; right:25rem/$n;
+                background:url(../img/licai/income-desc.png) no-repeat;
+                background-size:100% 100%; position: absolute;
+            }
+            .top{
+                color:#fff; text-align: center; 
+                p{opacity: 0.8; margin:20rem/$n 0 5rem/$n;}
+                em{
+                    display: block; font-size:80rem/$n; line-height: 1;
+                    span{
+                        font-size:60rem/$n;
+                    }
+                    i{
+                        font-size:30rem/$n;
+                    }
+                }
+                &.nopry{
+                    p{
+                        margin:40rem/$n 0 15rem/$n;
+                    }
+                    em{
+                        font-size: 100rem/$n;
+                        span{
+                            font-size: 72rem/$n;
+                        }
+                        i{
+                            font-size:42rem/$n;
+                        }
+                    }
+                }
+            }
+            .income{
+                padding:25rem/$n 0 0; color:rgba(255,255,255,0.7); position: relative; z-index: 1;
+                text-align: center; @extend .f28; height:90rem/$n;
+            }
+            .progress{
+                height: 2px; margin:97rem/$n 0 0; width:100%; position:relative;z-index: 1;
+                box-sizing: border-box;
+                .line{
+                    height: 2px; width:100%;
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0));
+                }
+                .current{
+                    height: 2px; width:100%; position:absolute; left:0; top:0; z-index: 2;
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0.1) 0%, rgba(255,255,255,1) 100%);
+                }
+                .point{
+                    width:22rem/$n; height:22rem/$n; position:absolute; z-index: 3; top:50%;
+                    margin-top:-11rem/$n;
+                    em{
+                        display: block; width:100%; height:100%; background:#83b8ff;border-radius: 50%;
+                        box-sizing: border-box; padding:4rem/$n;
+                        span{
+                            width:100%; height:100%; display: block;
+                            background:#fff; border-radius: 50%;
+                        } 
+                    }
+                    .number{
+                        height:28rem/$n; line-height: 32rem/$n; position: absolute; top:-44rem/$n; display:inline-block;
+                        left:50%; text-align: center; font-size:20rem/$n;
+                        color:rgba(255,255,255,0.8);  background:#4794f8; padding:0 15rem/$n;
+                        border-radius: 6rem/$n;
+                        transform: translate3d(-50%,0,0);-webkit-transform: translate3d(-50%,0,0);
+                        span{
+                            position: relative; z-index: 2; display: block; text-align: center;
+                            width: 100%; height:100%; white-space: nowrap;
+                        }
+                        i{
+                            width:12rem/$n; height:12rem/$n; display: block;
+                            background:#4794f8; position: absolute; z-index: 1;
+                            left:50%; top:21rem/$n; margin:0 0 0 -7rem/$n;
+                            transform: rotateZ(45deg);-webkit-transform: rotateZ(45deg);
+                        }
+                    }
+                }
+            }
+            .desc{
+                padding:0; height:70rem/$n; background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.6);
+                line-height: 76rem/$n; position: absolute; width:100%; left:0; bottom:0;
+                text-align: center; font-size:24rem/$n;
+                span{
+                    display: inline-block; padding:0 20rem/$n;
+                }
+            }
+
+        }
+        .list{
+            background:#fff;
+            width: 100%;
+            dl{
+                @extend .m-border-b; height:70rem/$n; line-height:74rem/$n; padding:0 30rem/$n;
+                box-sizing:border-box;
+                dt{
+                   float: left;
+                }
+                dd{
+                    float: right; 
+                }
+            }
+            ul{
+                box-sizing:border-box; height:110rem/$n; padding:15rem/$n 30rem/$n 0;
+                @extend .f24;
+                span{
+                    float: right;
+                }
+                li{
+                    height: 50rem/$n; position: relative;
+                }
+                li:last-child{
+                    span{
+                        color:#ff8706;
+                    }
+                }
+                .progress{
+                    width: 560rem/$n; height:5rem/$n; float: left;
+                    background:#e9e9e9; margin:15rem/$n 0 0; border-radius:3rem/$n;
+                    .point{
+                        background:#ff8706; height:5rem/$n; border-radius:3rem/$n;
+                        position: relative;
+                        em{
+                            width: 20rem/$n; height:20rem/$n; background:#ff8706;
+                            border-radius:50%; position: absolute; right:0; top:50%;
+                            -webkit-transform: translate(0,-50%);
+                            transform: translate(0,-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 购买
+    .project-buy{
+        margin:20rem/$n 0 0; background:#fff; width:100%; overflow:hidden;
+        .title{
+            height: 80rem/$n;
+            ul{
+                height:100%; display: -webkit-box;
+                li{
+                    -webkit-box-flex : 1; height:100%; position:relative;
+                    span{
+                        display: block; margin:0 auto; width:140rem/$n;
+                        height:100%; box-sizing: border-box; padding:20rem/$n 0 0;
+                        line-height:42rem/$n; position: relative; text-align: center;
+                    }
+                    &.active{
+                        span{
+                            color:#ff8706; height:81rem/$n;
+                            border-bottom:3rem/$n solid #ff8706;
+                        }
+                    }
+                }
+            }
+        }
+        .content{
+            height:610rem/$n; width:200%; display: -webkit-box;
+            transition: all .5s cubic-bezier(0.71, 0.02, 0.32, 0.99);
+            .item{
+                -webkit-box-flex : 1; height:100%; padding:0 30rem/$n; overflow:hidden;
+                p.only{
+                    color:#ff8706; padding:30rem/$n 0 0; height:40rem/$n;
+                }
+                .bar{
+                    height: 270rem/$n; overflow: hidden;
+                }
+                .m-btn{
+                    margin:0; background: #ff8706; height: 96rem/$n; font-size:36rem/$n;
+                    border-radius: 8rem/$n;
+                    &:disabled{
+                        background: #c2c2c2;
+                    }
+                }
+                .buy{
+                    height: 78rem/$n; border-radius: 6rem/$n; margin:30rem/$n 0; zoom:1; 
+                    display: -webkit-box; line-height: 82rem/$n; position: relative; width:100%;
+                    label{
+                        display: block; padding:0 0 0 20rem/$n;
+                    }
+                    input{
+                        border:0; height: 38rem/$n; padding:0; margin:20rem/$n 0 0; outline: none;
+                        font-size:32rem/$n; width:400rem/$n; line-height:38rem/$n;
+                    }
+                    a,span,i{
+                        display: block; padding:0 0 0 10rem/$n;
+                    }
+                    i{
+                        color:#c1c1c1;
+                    }
+                    &.done{
+                        color:#c1c1c1;
+                        #captial_buy_all{ color:#808080; }
+                    }
+                    &.error{
+                        border-color:#f00;
+                        em{
+                            position: absolute; right:0; bottom:-36rem/$n; color:#f00;
+                            height: 30rem/$n; line-height:30rem/$n; font-size:24rem/$n;
+                        }
+                    }
+                }
+                ul{
+                    margin:30rem/$n 0;
+                    li{
+                        height:60rem/$n;
+                        i{
+                            color:#ff8706; margin:0 0 0 10rem/$n;
+                        }
+                    }
+                }
+                .pact{
+                    margin:0 0 30rem/$n; line-height:24rem/$n; height:24rem/$n;
+                    input{
+                        position: relative;
+                        width: 22rem/$n;
+                        height: 22rem/$n;
+                        display: block;
+                        -webkit-appearance: none;
+                        background: transparent;
+                        float: left;
+                        margin: 0 10rem/$n 0 0;
+                        border:2rem/$n solid #2882f8;
+                        &:checked{
+                            &:after{
+                                transform: rotate(-45deg);
+                                -webkit-transform: rotate(-45deg);
+                                position: absolute;
+                                top: 25%;
+                                left: 10%;
+                                display: table;
+                                width: 14rem/$n;
+                                height: 6rem/$n;
+                                border: 2rem/$n solid #2882f8;
+                                border-top: 0;
+                                border-right: 0;
+                                content: ' ';
+                            }
+                        }
+                        &:disabled{
+                            border-color: #808080;
+                            &:checked{
+                                &:after{
+                                    transform: rotate(-45deg);
+                                    -webkit-transform: rotate(-45deg);
+                                    position: absolute;
+                                    top: 25%;
+                                    left: 10%;
+                                    display: table;
+                                    width: 14rem/$n;
+                                    height: 6rem/$n;
+                                    border-top: 0;
+                                    border-right: 0;
+                                    content: ' ';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+[data-dpr="1"]{
+    .project .project-buy .content .item .pact input,
+    .project .project-buy .content .item .pact input:checked:after, 
+    .project .project-buy .content .item .pact input.checked:after{
+        border-width:1px;
+    }
+}
+
+
+// 柱状图
+.echarts_bar{
+    width: 500rem/$n; height:180rem/$n; margin:40rem/$n auto 0; position: relative; z-index:1;
+    .title{
+        position: absolute; left:-56rem/$n; top:0;
+    }
+    .step{
+        position: absolute; bottom:0; width:28rem/$n;
+        transition : all .3s ease-in-out;
+        span,em{
+            position: absolute; left:50%; transform:translate3d(-50%,0,0);-webkit-transform:translate3d(-50%,0,0);
+            display: block; min-width:180rem/$n; text-align:center; height:28rem/$n;
+            max-width:240rem/$n;
+        }
+        span{
+            top: -36rem/$n; min-width:280rem/$n;
+        }
+        em{
+            bottom:-36rem/$n;
+        }
+        div{
+            width:28rem/$n; height:100%;
+        }
+        &.c1{
+            left:60rem/$n;
+            span{ color:#ff8706; }
+            div{ background:#ff8706; }
+        }
+        &.c2{
+            left:218rem/$n;
+            span{ color:#ffaa06; }
+            div{ background:#ffaa06; }
+        }
+        &.c3{
+            left:375rem/$n;
+            span{ color:#ffc000; }
+            div{ background:#ffc000; }
+        }
+    }
+}
+// 项目 间隔
+.project-space{
+    height: 86rem/$n; text-align: center; line-height: 86rem/$n;
+}
+.project-desc{
+    .item{
+        background:#fff; 
+        margin: 0 0 20rem/$n;
+        .title{
+            height:60rem/$n; line-height: 60rem/$n;
+            padding:0 30rem/$n 0;
+            box-sizing: border-box;
+            display: -webkit-box;
+            display: box;
+            .icon2{
+                color:#2882f8; font-size:36rem/$n;
+            }
+            h2{
+                @extend .f28; color:#3c4453; line-height: 60rem/$n; margin:0 0 0 5rem/$n;
+                -webkit-box-flex: 1;
+            }
+            span{
+                color:#808080; font-size:28rem/$n;
+                display: block;
+                width:30%;
+                text-align: right; line-height:66rem/$n;
+            }
+        }
+        .content{
+            padding:20rem/$n 30rem/$n 15rem/$n;
+            box-sizing: border-box;
+            .bar{
+                padding:0 0 65rem/$n;
+                .desc{
+                    font-size: 22rem/$n; color:#ff8706; text-indent:45rem/$n; padding:0;
+                }
+                .echarts_bar{
+
+                }
+                .title{
+                    padding:0;
+                }
+            }
+            .desc{
+                padding:0 0 15rem/$n;
+                li{
+                    height: 60rem/$n;
+                }
+            }
+            .words{
+                line-height: 48rem/$n;  color:#808080;
+            }
+            .other{
+                display: -webkit-box;
+                li{
+                    -webkit-box-flex: 1;box-flex: 1; height: 80rem/$n; box-sizing: border-box;
+                    padding:10rem/$n 0 0;
+                    a{
+                        display: block; width:100%; height:100%;
+                        span{
+                            display: inline-block; width:40rem/$n; height:40rem/$n;
+                            font-size:40rem/$n; line-height:40rem/$n; text-align:center;
+                            margin:0 10rem/$n 0 0; float: left;
+                            border-radius:50%; color:#2882f8;
+                        }
+                        i{
+                            text-align: center; display:inline-block; line-height:44rem/$n;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.loan-info{
+    margin:30rem/$n 0 0;
+    .ensure-mark{
+        padding:0;
+    }
+}
+
+.project-buy{
+    position: fixed; background:#fff; width:100%; height:200rem/$n;
+    left:0; bottom:0; z-index: 100; @extend .m-border-t;
+    p{
+        padding:15rem/$n 0 0; text-align:center; font-size:28rem/$n;
+        line-height: 60rem/$n;
+        span{color:#ff8706;}
+    }
+    
+    a,div{
+        display: block; width:690rem/$n; height:100rem/$n; font-size:36rem/$n; line-height:100rem/$n;
+        text-align: center; background:#ff8706; color:#fff; margin: 0 auto; border-radius:10rem/$n;
+    }
+    div{
+        background:#c2c2c2;
+    }
+}
+.space-230{
+    height: 230rem/$n;
+}
+.backTop{
+    width: 80rem/$n;height: 80rem/$n; @extend .m-border;border-color: #806464;border-radius: 50%;
+    text-align: center;position:fixed;right: 30rem/$n; bottom: 230rem/$n;background-color: #fff;
+    z-index: 100;
+    .icon2{
+      display: inline-block;font-size: 22rem/$n; padding:10rem/$n 0 0;
+      &:before{font-size: 32rem/$n;}
+    }
+    p{font-size: 20rem/$n;line-height: 24rem/$n;}
+    &:active:before{
+      content:' ';background-color: rgba(0,0,0,.1);position: absolute;top: 0;left: 0;width: 80rem/$n;height: 80rem/$n;
+      border-radius: 50%;
+    }
+}
+// 理财详情页 弹层
+.layer-income{
+    .layer-title{
+        height: 87rem/$n; padding:0; color:#ffe400; font-size:36rem/$n; background:#ff5129; border-radius:15rem/$n 15rem/$n 0 0;
+    }
+    .layer-income-desc{
+        .title{
+            height: 90rem/$n; font-size:32rem/$n; text-align:center; line-height:90rem/$n;
+        }
+        span{
+            color:#ff8706;
+        }
+        .content{
+            padding:20rem/$n 0 0; font-size:28rem/$n;
+            strong{
+                display: block; color:#ff8706; margin:0 0 10rem/$n;
+            }
+            p{
+                line-height: 40rem/$n; padding:0 0 20rem/$n;
+            }
+        }
+    }
+    .layer-incom-icon{
+        width: 179rem/$n; height:138rem/$n; background:url(../img/licai/income-desc2.png) no-repeat;
+        background-size:100% 100%; position: absolute; left:50%; top:-118rem/$n; margin:0 0 0 -90rem/$n;
+    }
+}
+
+// 支付密码 弹层
+.layer-password{
+    .layer-title{
+        font-size: 32rem/$n; padding:0; height:90rem/$n; line-height:90rem/$n;
+    }
+    .layer-content{
+        p{
+            font-size: 50rem/$n; text-align:center; color:#000; height:100rem/$n; line-height:80rem/$n;
+            &.error{
+                color:#ff8706;
+            }
+        }
+        input{
+            width: 100%; margin:0; padding:5rem/$n 0 0; text-align:center; font-size:32rem/$n;
+            outline: none; height:75rem/$n; line-height:36rem/$n;
+            transition: all .3s ease-in-out;
+            &.error{
+                animation: input_password_empty .5s ease-in-out;
+            }
+        }
+    }
+}
+@-webkit-keyframes input_password_empty {
+    0% { -webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);  }
+   15% { -webkit-transform: translate3d(-10px,0,0);transform: translate3d(-10px,0,0);  }
+  65% { -webkit-transform: translate3d(10px,0,0);transform: translate3d(10px,0,0);  }
+  85% { -webkit-transform: translate3d(-5px,0,0);transform: translate3d(-5px,0,0);  }
+  100% { -webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);  }
+}

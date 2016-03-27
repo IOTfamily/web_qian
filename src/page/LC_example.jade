@@ -1,0 +1,14 @@
+extends ../layout
+block main
+    //滑动杆
+    .slider-ui.mt20.p20
+        |<input class="slider" id="slider" min="1" max="5" step="1" value="2" type="range"/>
+        p.slider-val
+        .slider-btn
+
+    //echarts
+    #main(style="width:100%;height:300px;")
+    |<input class="echart-input" type='value'/>
+
+    
+    script(src="js/my_echarts.js")

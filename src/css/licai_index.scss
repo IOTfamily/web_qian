@@ -1,0 +1,256 @@
+// 理财首页
+@import './block/var';
+@import './block/swiper';
+
+.swiper-wrapper{}
+.swiper-slide{
+	-webkit-box-flex : 1;
+}
+
+.topic{
+	width:750rem/$n; height:280rem/$n; margin:0 auto 20rem/$n;
+	.swiper-slide{
+		img{
+			width: 100%; height:100%;
+		}
+	}
+	.swiper-pagination-bullet{
+		opacity: .4;
+	}
+	.swiper-pagination-bullet-active{
+		background: #fff;
+		opacity: 1;
+	}
+}
+
+.project-swiper{
+	margin:0 auto 20rem/$n; width:750rem/$n; height:720rem/$n;
+	background:#fff;
+	.item{
+		width:100%; height:100%;
+		h1{
+			font-size: 48rem/$n; text-align:center; line-height:110rem/$n;
+		}
+		.low , .top{
+			position: absolute;    text-align:center;
+			div{
+				width: 152rem/$n; height:152rem/$n; border:4rem/$n solid #ff8e14;
+				border-radius:50%;  font-size:34rem/$n;
+				box-sizing:border-box; padding:40rem/$n 0 0; line-height:60rem/$n; color:#ff8e14;
+				span{
+					font-size: 50rem/$n;
+				}
+			}
+			p{
+				padding:30rem/$n 0 0; 
+			}
+		}
+		.low{
+			left:78rem/$n; top:190rem/$n; width:160rem/$n;
+		}
+		.top{
+			right: 38rem/$n;
+			width:260rem/$n; top:120rem/$n;
+			div{
+				width: 232rem/$n; height:232rem/$n; font-size:44rem/$n; padding:80rem/$n 0 0;
+				line-height: 80rem/$n; border-color:#ff390b; color:#ff390b; margin:0 auto;
+				span{
+					font-size: 74rem/$n;
+				}
+			}
+			p{
+				padding:20rem/$n 0 0;
+			}
+		}
+		.desc{
+			width: 170rem/$n;  top:150rem/$n; left:260rem/$n;
+			position: absolute;
+			p{
+				color:#ff390b; font-size:30rem/$n; height:55rem/$n; text-align:center; margin:0 0 10rem/$n;
+			}
+			span{
+				display: block; width:58rem/$n; height:58rem/$n; margin:0 auto 5rem/$n;
+				background:url(../img/licai/icon-rocker.png) no-repeat;
+				background-size: 100% auto;
+			}
+			i{
+				display: block; width:137rem/$n; height:60rem/$n; margin:0 auto;
+				background:url(../img/licai/icon-arrow-rocker.png) no-repeat;
+				background-size: 100% auto;
+			}
+		}
+		.status{
+			left:0; bottom:120rem/$n; position: absolute; width:100%;
+			display: -webkit-box;
+			-webkit-box-pack:center;
+			padding:0 30rem/$n; box-sizing:border-box;
+			span{
+				display: block; color:#808080; border-color:#808080; height:28rem/$n; line-height:32rem/$n;
+				padding:0 23rem/$n; margin:0 10rem/$n 0 0;
+			}
+		}
+		a.buy{
+			height: 96rem/$n; background:#ff8706; position: absolute; bottom:0; margin:0 30rem/$n; border-radius:10rem/$n;
+			text-align: center; color:#fff; font-size:36rem/$n;  display:block; cursor: pointer;width:690rem/$n;
+			em{
+				line-height: 40rem/$n; display:block; padding:14rem/$n 0 5rem/$n;
+			}
+			span{
+				display: block; font-size:24rem/$n; text-align:center; line-height:30rem/$n;
+			}
+			&.over{
+				background:#ffba00; color:#fff;line-height:96rem/$n;
+			}
+			&.done{
+				background: #c1c1c1; color:#fff;line-height:96rem/$n;
+			}
+            &.pay{ line-height:96rem/$n; }
+		}
+        .center{
+            width: 340rem/$n;height: 340rem/$n;text-align: center;position:absolute;left:50%;top: 115rem/$n;
+            -webkit-transform: translate(-50%,0);transform: translate(-50%,0);background-color: #ffae00;
+            border-radius: 50%;border: 10rem/$n solid #fff3e1;@extend .c-White;
+            .type{@extend .f24;margin-top: 50rem/$n;min-height: 20rem/$n;}
+            .profit{
+               span{font-size: 114rem/$n;}
+               i{font-size: 76rem/$n;}
+            }
+            .line{@extend .m-border-b; border-color: rgba(255,255,255,.5);width: 230rem/$n;margin: 30rem/$n auto 0;}
+            .time{margin-top: 15rem/$n;color: rgba(255,255,255,.8);}
+        }
+        .desc1{
+          left: 0;top: 495rem/$n;position: absolute;width: 100%;display: -webkit-box;-webkit-box-pack: center;
+          padding: 0 0.4rem;box-sizing: border-box;color: #ffae00;
+        }
+	}
+    .swiper-button-next,.swiper-button-prev{
+        background: none;color: #c1c1c1;font-size: 50rem/$n;position: absolute; width:80rem/$n;height:120rem/$n;
+        text-align: center; line-height: 120rem/$n;top:290rem/$n;
+    }
+	.swiper-pagination-bullet{
+		background:#e9e9e9;
+		opacity: 1; width:16rem/$n; height:16rem/$n;
+	}
+	.swiper-pagination-bullet-active{
+		background: #ff6701;
+	}
+}
+.licai-index-mark{
+	.ensure-mark{
+		padding:10rem/$n 0 30rem/$n;
+	}
+}
+.morebanner{
+	width: 750rem/$n;
+	color: #fff;
+	text-align: center;
+	padding: 70rem/$n 0;
+	position: relative;
+	img{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 750rem/$n;
+		z-index: -1;
+	}
+	h4{
+		font-size: 78.89rem/$n;
+		position: relative;
+		&:after{
+			content:'';
+			display: block;
+			width: 315rem/$n;
+			height: 1px;
+			background-color: #fff;
+			margin: 6rem/$n auto 0;
+		}
+		i{
+			display: block;
+			width: 68rem/$n;
+			height: 30rem/$n;
+			font-size: 24rem/$n;
+			background-color: rgba(0,0,0,0.2);
+			margin: 6rem/$n auto 0;
+			position: absolute;
+			right: 150rem/$n;
+			top: 10rem/$n;
+		}
+
+	}
+	p{
+		font-size: 31.22rem/$n;
+		margin-top: 7rem/$n;
+		&:after{
+			content:'';
+			display: block;
+			width: 315rem/$n;
+			height: 1px;
+			background-color: #fff;
+			margin: 6rem/$n auto 0;
+		};
+	}
+}
+.moreicon{
+	width:750rem/$n;
+	height: 255rem/$n;
+	overflow: hidden;
+	position: relative;
+	background-color: #fff;
+	.morefloat{
+		float: left;
+		width: 375rem/$n;
+		height: 100%;
+		margin-top: 35rem/$n;
+		span{
+			display: block;
+			width: 140rem/$n;
+			height: 140rem/$n;
+			border-radius: 50%;
+			-webkit-border-radius: 50%;
+			border:2px solid rgba(41,134,248,1);
+			margin: 0 auto;
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				i{
+					display: block;
+					width: 80rem/$n;
+					height: 80rem/$n;
+					color:#2882f8;
+					font-size:80rem/$n;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					&.icon-lccooperation01{
+						width: 100rem/$n;
+						height: 100rem/$n;
+						font-size:100rem/$n;
+					}
+				}
+			}
+		}
+		p{
+			text-align: center;
+			font-size: 28rem/$n;
+			margin-top: 15rem/$n;
+		}
+	}
+}
+.morefooter{
+	width: 750rem/$n;
+	margin-top: 210rem/$n;
+	margin-bottom: 60rem/$n;
+	p{
+		text-align: center;
+		font-size: 28rem/$n;
+	}
+}
+.morenet{
+	color: rgba(41,134,248,1)!important;
+	font-size: 32rem/$n;
+}

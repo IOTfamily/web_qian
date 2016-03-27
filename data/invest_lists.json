@@ -1,0 +1,46 @@
+{
+  "result": {
+    "code": "OK",
+    "msg": "调用成功"
+  },
+  "data": {
+    "productLoan": [
+      {
+        "id": "1",
+        "name": "马华一号（杠杆）",
+        "stage": "03161901",
+        "term": "3",
+        "collected_funds": "1000000",
+        "status": "3",
+        "collect_funds": "1000000",
+        "income_rate": "0.0",
+        "valid_with_funding_id": "1",
+        "more_income_rate": "-4.0"
+      }
+    ],
+    "productDirect": [
+      {
+        "id": "2",
+        "name": "马华二号（普通）",
+        "stage": "03161901",
+        "term": "3",
+        "collected_funds": "1000000",
+        "status": "3",
+        "collect_funds": "1000000",
+        "income_rate": "0.0820",
+        "valid_with_funding_id": "0"
+      },
+      {
+        "id": "2",
+        "name": "马华二号111（普通）",
+        "stage": "03161901",
+        "term": "3",
+        "collected_funds": "1000000",
+        "status": "3",
+        "collect_funds": "1000000",
+        "income_rate": "0.0820",
+        "valid_with_funding_id": "0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+//配资购买购买页
+extends ../layout
+
+block header
+	include ./block/header
+	.m-container
+		.item-buy.loan-buy
+			.pro_dec.mt-20
+				.pro_name
+					h3 阳光信用宝
+					span 剩余可投：
+						i.c-Orange 2131321.00元
+				ul
+					li 预期年化：70%年化利率＋3％借款利率
+					li 投资期限：60天
+					li 回款方式：到期还本付息
+			.pro_buy
+				.buy_info.mt-20
+					h3 可用金额：
+						span 20000.00元
+						a(href='#').fright.c-Blue 充值
+				.buy.m-border.f32
+					label 投入本金：
+					input(type="text" name="input_can_buy" id="input_can_buy" data-last="10761188" data-borrow="0" data-canbuy='1000' data-funding-id="1" placeholder='最多可借10000.00')
+					em.message 
+				ul
+					li 借款金额：
+						span.borrow_number 12132元
+					li 借款利率：4.00%
+					li 借款期限：60天
+			.agreement
+				input(type="checkbox",checked="checked",class="m-checkbox")
+				span 我已阅读并确认
+					a(href='#').c-Blue#show-footer 《阳光互信借款投资协议组》
+
+
+			button.m-btn-orange.Orange-bg.br-radius-8.buy_button(disabled) 确认投资
+
+		include ./block/ensure_mark
+	script.
+		var min_invest = 3, // 最小金额
+			invest_step = 4; // 倍增
+		function proudct_buy(opts){
+			console.log(opts)
+		}
+	script(src="js/licai_info.js")
+
+	
+

@@ -1,0 +1,70 @@
+{ 
+"result": { 
+"code": "OK", 
+"msg": "调用成功" 
+}, 
+"data": { 
+"investRecords": [ 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:41:09" 
+}, 
+{ 
+"mobile": "134****6938", 
+"invest_funds": "100000", 
+"is_loan": "1", 
+"create_time": "2016-03-02 14:19:07" 
+} 
+] 
+} 
+}

@@ -1,0 +1,67 @@
+{
+  "root": {
+    "src": "./src",
+    "dest": "./dest",
+    "data" : "./data",
+    "route" : "./routes"
+  },
+  "express":{
+    "port" : 8083
+  },
+  "tasks": {
+    "browserSync":{
+      "proxy" : "http://127.0.0.1:8083",
+      "port":8084
+    },
+    "move":{
+       "src" : "./dest",
+       "dest" : "../web/Public/lc"
+    },
+    "js": {
+      "src": "js",
+      "dest": "js",
+      "extractSharedJs": true,
+      "sharedJsName":"commons",
+      "extensions": ["js"],
+      "chunks" : ["licai","licai_index","licai_info","licai_investRecord","licai_dealRecord","licai_investLists"]
+    },
+    "sprite":{
+      "name":"sprite.png"
+    },
+    "css": {
+      "src": "css",
+      "dest": "css",
+      "sass": {},
+      "autoprefixer" : "last 2 versions",
+      "extensions": ["scss","css"]
+    },
+
+    "jade" : {
+        "src" : "page",
+        "dest" : "./",
+        "jade" : {
+         "pretty": true
+         },
+        "extensions":["jade"]
+    },
+
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif","ico"]
+    },
+
+    "fonts": {
+      "src": "font",
+      "dest": "font",
+      "extensions": [ "woff", "eot", "ttf", "svg"]
+    },
+
+    "iconFont": {
+      "src": "icon",
+      "dest": "font",
+      "sassDest": "generated",
+      "extensions": [ "woff", "eot", "ttf", "svg"]
+    }
+  }
+}

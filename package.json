@@ -1,0 +1,71 @@
+{
+  "name": "web-project",
+  "version": "0.1.0",
+  "description": "互信钱包web前端工程方案",
+  "engines": {
+    "node": "4.0.0",
+    "npm": "3.5.2"
+  },
+  "homepage": "http://gitlab.ibicid.com/luyawei/web_template",
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.ibicid.com/luyawei/web_template.git"
+  },
+  "scripts": {
+    "release": "gulp release",
+    "start": "gulp",
+    "test": "gulp release"
+  },
+  "dependencies": {
+    "babel": "^6.3.26",
+    "babel-core": "^6.4.0",
+    "babel-loader": "^6.2.1",
+    "babel-polyfill": "^6.5.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "gulp-chmod": "^1.3.0",
+    "webpack": "^1.12.11"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "compression": "^1.5.1",
+    "del": "^2.0.2",
+    "express": "^4.13.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-changed": "^1.2.1",
+    "gulp-css-spriter": "^0.3.3",
+    "gulp-data": "^1.2.0",
+    "gulp-filesize": "0.0.6",
+    "gulp-filter": "^2.0.2",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-htmlmin": "~1.1.3",
+    "gulp-iconfont": "^3.0.3",
+    "gulp-if": "~1.2.5",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-render": "^0.2.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^5.1.0",
+    "gulp-rev-napkin": "^0.1.0",
+    "gulp-rev-replace": "^0.4.2",
+    "gulp-sass": "^2.0.4",
+    "gulp-sequence": "^0.4.0",
+    "gulp-sizereport": "^1.1.2",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-svgstore": "^5.0.3",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.3",
+    "lodash": "^3.10.0",
+    "merge-stream": "^0.1.8",
+    "mocha": "^2.2.5",
+    "morgan": "^1.6.1",
+    "object-assign": "^3.0.0",
+    "open": "0.0.5",
+    "pretty-hrtime": "~1.0.0",
+    "require-dir": "^0.3.0",
+    "vinyl-source-stream": "~1.1.0"
+  }
+}

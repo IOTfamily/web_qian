@@ -1,0 +1,61 @@
+@import './block/var';
+
+// 安全保障
+.safety{
+	.banner{
+		width: 100%; height:310rem/$n; background:url(../img/licai/banner_safety.png) no-repeat;
+		background-size:cover; margin:0 0 30rem/$n;
+	}
+	.content{
+		background:#fff; margin:0 30rem/$n 30rem/$n; overflow:hidden;
+		.item{
+			margin:0 30rem/$n;
+			.title{
+				padding:25rem/$n 0 0; text-align:center; height:60rem/$n; 
+				font-size: 28rem/$n; color:#2882f8; line-height:60rem/$n;
+			}
+			.con{
+				padding:0 0 30rem/$n;
+				p{
+					font-size:26rem/$n; color:#3c4453; line-height:46rem/$n;
+				}
+			}
+		}
+		.pic{
+			width:617rem/$n; height:178rem/$n; margin:0 auto; background:url(../img/licai/banner_safety2.png) no-repeat;
+			background-size:100% auto; 
+		}
+	}
+}
+
+// 关于我们
+.aboutus{
+	.banner{
+		width: 100%; height:360rem/$n; background:url(../img/licai/banner_about.jpg) no-repeat;
+		background-size:cover; margin:0 0 30rem/$n;
+	}
+	.content{
+		margin:0 30rem/$n 30rem/$n; overflow:hidden;
+		.item{
+			margin:0 0 30rem/$n; padding:30rem/$n 40rem/$n; background:#fff;
+			.title{
+				font-size:28rem/$n; line-height:28rem/$n; color:#2882f8; padding:0 0 0 10rem/$n; position: relative;
+
+				&:before{
+					display: block;
+					content: ' ';
+					width:4rem/$n; height:26rem/$n;
+					background:#2882f8;
+					position: absolute;
+					left:0; top:0;
+				}
+			}
+			.con{
+				padding:20rem/$n 0 0;
+				p{
+					line-height: 46rem/$n; font-size:26rem/$n; color:#3c4453;
+				}
+			}
+		}
+	}
+}

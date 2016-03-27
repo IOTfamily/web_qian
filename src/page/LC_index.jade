@@ -1,0 +1,83 @@
+// 理财首页
+extends ../layout
+block header
+    -var title = '理财'
+    include ./block/header
+
+block main
+    .m-container.white-bg
+        .topic.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    a(href="http://www.baidu.com")
+                        img(src="img/licai/banner.png")
+                .swiper-slide
+                    a(href="http://www.baidu.com")
+                        img(src="img/licai/banner.png")
+                .swiper-slide
+                    a(href="http://www.baidu.com")
+                        img(src="img/licai/banner.png")
+            .swiper-pagination
+        .project-swiper.swiper-container
+            .swiper-wrapper
+                .swiper-slide.item
+                    h1 阳光信用宝
+                    .center
+                        p.type 借款购买
+                        .profit 12.0% 
+                        p.line
+                        p.time 期限90天
+                    p.desc1 7.0%原始收益 + 5.0%借款收益
+                    .status
+                        span.m-border-r 本金保障
+                        span.m-border-r 一次性还本付息
+                        span(data-endTime='70000')
+                    a.buy(href="./LC_info.html")
+                        em 募集中
+                        span(data-last='1000000') 剩余金额：1000000
+                .swiper-slide.item
+                    h1 阳光教育宝 
+                    .center
+                        p.type
+                        .profit 8.0%
+                        p.line
+                        p.time 期限90天
+                    p.desc1 精选教育分期资产
+                    .status
+                        span.m-border-r 预售期2天
+                        span.m-border-r 一次性还本付息
+                        span(data-endTime='0')
+                    a.buy.over(href="./LC_info.html") 已满标
+                .swiper-slide.item
+                    h1 阳光教育宝
+                    .center
+                        p.type
+                        .profit 8.0%
+                        p.line
+                        p.time 期限90天
+                    p.desc1 精选教育分期资产
+                    .status
+                        span.m-border-r 预售期2天
+                        span.m-border-r 一次性还本付息
+                        span(data-endTime='0') 10时23分后结束
+                    a.buy.done(href="./LC_info.html") 已结束
+                .swiper-slide.item
+                    h1 阳光教育宝
+                    .center
+                        p.type
+                        .profit 8.0%
+                        p.line
+                        p.time 期限90天
+                    p.desc1 精选教育分期资产
+                    .status
+                        span.m-border-r 预售期2天
+                        span.m-border-r 一次性还本付息
+                        span(data-endTime='0') 10时23分后结束
+                    a.buy.pay 还款中
+                
+            .swiper-button-next.icon.icon-right
+            .swiper-button-prev.swiper-button-disabled.icon.icon-left
+        .licai-index-mark
+            include ./block/ensure_mark
+    include ./block/footer
+    script(src="js/licai_index.js")
