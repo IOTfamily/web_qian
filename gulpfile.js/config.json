@@ -6,16 +6,16 @@
     "route" : "./routes"
   },
   "express":{
-    "port" : 8083
+    "port" : 8085
   },
   "tasks": {
     "browserSync":{
-      "proxy" : "http://127.0.0.1:8083",
-      "port":8084
+      "proxy" : "http://127.0.0.1:8085",
+      "port":8086
     },
     "move":{
        "src" : "./dest",
-       "dest" : "../web/Public/lc"
+       "dest" : "../web_think/Public/web"
     },
     "js": {
       "src": "js",

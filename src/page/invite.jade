@@ -1,0 +1,31 @@
+//
+   Created by lio on 16/4/12.
+
+extends ./block/invitehead
+block header
+    include ./block/header
+block main
+    .m-container
+        #invitePage.invitePage
+            .indexTop
+            button.m-btn-orange.submit(style='display:none') 提交邀请码
+            #canvas
+                canvas#canvasPan(width=300 height=300)
+            .footer
+                .checkregular
+                    a(href='regular.html') 互动规则>>
+                p 活动时间：2016年5月5日0:00~2016年5月25日24:00
+                button.m-btn-orange.ressubmit#ressubmit 提交邀请码
+                ul#carousel
+                    li 恭喜：谢XX 182xxxx6187 抽中了一台
+                        span 苹果6S
+                    li 恭喜：张XX 180xxxx3815 抽中了一台
+                        span 小米手机
+                    li 恭喜：张XX 180xxxx3815 抽中了一台
+                        span 小米手机
+                    li 恭喜：张XX 180xxxx3815 抽中了一台
+                        span 小米手机
+
+    script(src='./js/invite.js')
+    script.
+        document.getElementById('invitePage').style.minHeight = window.innerHeight+'px';

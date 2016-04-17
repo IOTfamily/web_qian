@@ -1,0 +1,17 @@
+// 公共模块
+@import './var';
+@import './reset';
+@import './iconfont';
+.farmer-login{
+  div{
+    overflow: hidden;
+    background-color: #fff;margin-top: 20rem/$n;
+    label{
+      display: block;height: 100rem/$n;width: 100rem/$n;text-align: right;padding: 0 20rem/$n;float: left;
+      line-height: 100rem/$n;
+    }
+    input{
+      display: block;float: left;height:100rem/$n;line-height: 100rem/$n;@extend .f28;
+    }
+  }
+}

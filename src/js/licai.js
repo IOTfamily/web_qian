@@ -27,3 +27,7 @@ import { Layer } from './model/layer';
 import { Message } from './model/message';
 import { SwitchTool } from './model/switch';
 
+//farmerlogin
+import './farmer/login'
+//import { Login } from './farmer/login';
+
